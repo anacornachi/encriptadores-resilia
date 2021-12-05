@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cifra de César</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Rubik:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/styles/global.css" />
+  </head>
+  <body>
+    <header>
+      <img src="./src/assets/images/logo.svg" alt="" />
+      <h1>Codificador e Decodificador</h1>
+    </header>
+    <main>
+      <form class="container" data-container>
+        <section class="section--config" data-section-config>
+          <h2 class="main--title">Codificador e decodificador</h2>
+          <h3 class="main--description">
+            Olá, bem vindx! <br />
+            <br />
+            Para começarmos, selecione o tipo de codificador que deseja:
+          </h3>
+          <div class="typeof--option">
+            <input
+              type="radio"
+              id="cesar"
+              class="radio"
+              name="type-of-encoder"
+              value="cifra-de-cesar"
+              data-cesar
+              style="cursor: pointer"
+              onclick="generateConfigFields()"
+            />
+            <label for="cesar" style="width: 25%">Cifra de Cesar</label>
+            <input
+              type="radio"
+              id="base64"
+              class="radio"
+              name="type-of-encoder"
+              value="base-64"
+              data-base64
+              style="cursor: pointer"
+              onclick="generateConfigFields()"
+            />
+            <label for="base64" style="width: 25%">Base 64</label>
+          </div>
+          <div class="shift--option" data-config-options></div>
+        </section>
+        <section class="section--texts">
+          <label for="input-text">Insira o texto:</label>
+          <textarea
+            class="previous--text"
+            name=""
+            id="input-text"
+            placeholder="Seu texto aqui..."
+            data-input-text
+            required
+          ></textarea>
+
+          <label for="">Resultado:</label>
+          <textarea
+            class="previous--text"
+            name=""
+            id="input-text"
+            placeholder="Seu texto aqui..."
+            data-output-text
+            disabled=""
+          ></textarea>
+        </section>
+      </form>
+    </main>
+    <footer>
+      <p class="footer--text">Feito com 💛 por Ana Cornachi 👋</p>
+    </footer>
+    <script src="./src/js/main.js"></script>
+  </body>
+</html>
